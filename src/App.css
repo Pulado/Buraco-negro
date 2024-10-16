@@ -1,0 +1,136 @@
+* {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('https://mega.ibxk.com.br/2023/07/11/11172833609368.jpg?ims=1280x690');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rectangle {
+  width: 40vw;
+  height: 75vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding-top: 30px; 
+  border-radius: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.158);
+  backdrop-filter: blur(3vh);
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.rectangle h1 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 10px; 
+}
+
+.rectangle h2 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 30px; 
+}
+
+.rectangle p {
+  font-size: 1rem;
+  color: white;
+  padding: 20px;
+  max-width: 80%; 
+  line-height: 1.5; 
+  text-align: justify; 
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.pulsing-ball {
+  width: 40vw;
+  height: 55vh;
+  background-color: rgba(20, 1, 31, 0.479);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeIn 6s forwards, pulse 5s infinite;
+  opacity: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95) translate(-50%, -50%);
+  }
+  
+  70% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+  
+  100% {
+    transform: scale(0.95) translate(-50%, -50%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+@media (max-width: 850px) {
+  .rectangle {
+    width: 90vw; 
+    height: auto; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .rectangle h1 {
+    font-size: 1.5rem; 
+  }
+
+  .rectangle h2 {
+    font-size: 1rem; 
+
+  .rectangle p {
+    font-size: 0.7rem; 
+    max-width: 90%; 
+    padding: 10px;
+  }
+
+  .pulsing-ball {
+    width: 70vw; 
+    height: 40vh;
+  }
+}
+}
